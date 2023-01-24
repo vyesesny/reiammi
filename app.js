@@ -51,14 +51,14 @@ app.get("/info", (req, res) => {
 });
 
 app.use(
-  "/api",
+  "/10235630-e269-45ea-bb46-6cb41cdac6ec",
   createProxyMiddleware({
     target: "http://127.0.0.1:8080/", // 需要跨域处理的请求地址
     changeOrigin: true, // 默认false，是否需要改变原始主机头为目标URL
     ws: true, // 是否代理websockets
     pathRewrite: {
       // 请求中去除/api
-      "^/api": "/qwe",
+      "^/10235630-e269-45ea-bb46-6cb41cdac6ec": "/2099121d-e2ee-4bab-9020-90aa6b6f27a2",
     },
     onProxyReq: function onProxyReq(proxyReq, req, res) {
       // 我就打个log康康
@@ -71,7 +71,7 @@ app.use(
 /* keepalive  begin */
 function keepalive() {
   // 1.请求主页，保持唤醒
-  let render_app_url = "https://nodejs-express-test-7lve.onrender.com";
+  let render_app_url = "https://yiskefse.onrender.com";
   request(render_app_url, function (error, response, body) {
     if (!error) {
       console.log("主页发包成功！");
